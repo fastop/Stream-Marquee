@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: black; color:white;  
+                font-family: "Lato", sans-serif; }
+        
+        .btn {    
+            display: inline-block;
+            padding: 0.75rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            text-decoration: none; 
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            border: thin solid #495057;
+            border-radius: 0.5rem;
+            background-color: #6c757d;    
+        }
+
+        #mainTitle {
+            text-transform: uppercase;
+        }
+
+        .input {
+            display: block;
+            width: 90%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: black;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;            
+            background-clip: padding-box;
+            border:  thin solid #495057;
+            border-radius: 0.5rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        #txtTitle{
+            width: 50%;
+        }
+        #txtMarquee {
+            height: 5em;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        #marqueeForm { margin-left: 5px;}
+
+        </style>
+</head>
+<body>
+    <marquee>
+        <div id="mainTitle">Estamos hablando de:</div>
+        <div id="mainMarquee"> Tema Mamamlon</div>
+    </marquee>
+
+    <hr/>
+
+
+    <form id="marqueeForm">
+        <input type="text" id="txtTitle" name="txtTitle" class="input" placeholder="Main Title">
+        <input type="text" id="txtMarquee" name="txtMarquee" class="input" placeholder="Topics">
+        <button class="btn" id="btnSetMarquee" > Send </button>
+    </form>
+
+
+</body>
+
+    <script>
+
+       loadData()
+
+        function loadData(){
+                        
+            let mainTitle =(localStorage.getItem("mainTitle") === null)? "" : localStorage.getItem("mainTitle");
+            let marquee =  (localStorage.getItem("marquee") === null)? "" : localStorage.getItem("marquee");
+
+            //Loading to marquee
+            document.getElementById("mainTitle").innerHTML = mainTitle;
+            document.getElementById("mainMarquee").innerHTML = marquee;
+
+            //Load to form
+            document.getElementById("txtTitle").value = mainTitle;//Value for main title 
+            document.getElementById("txtMarquee").value = marquee;//Value for themes
+        }
+
+            
+        function setMarqueeValues() {
+
+            let mainTitle = document.getElementById("txtTitle").value;//Value for main title 
+            let marquee = document.getElementById("txtMarquee").value;//Value for themes
+
+            localStorage.setItem("mainTitle", mainTitle);
+            localStorage.setItem("marquee", marquee);
+
+            loadData();
+        }   
+
+        //Handle the form event
+        const form = document.getElementById("marqueeForm");
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            setMarqueeValues();
+        });
+
+        //Handle button click
+        const btn = document.getElementById('btnSetMarquee');
+        btn.addEventListener('click', function(){
+            setMarqueeValues();
+        });
+
+
+    </script>
+</html>
