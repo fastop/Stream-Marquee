@@ -2,6 +2,8 @@
 
 > This project 
 
+Read this in other languages: [Español](README.es.md)
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/username/repository-name.svg)](https://github.com/username/repository-name/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/username/repository-name.svg)](https://github.com/username/repository-name/issues)
@@ -54,4 +56,12 @@ Follow these instructions to get a local copy of the project up and running for 
 
 List any software, tools, or dependencies required before running the setup (e.g., Node.js, Python, Docker).
 
- 
+ ## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## ✉️ Contact
+
+Your Name - [@your_twitter](https://www.google.com/search?q=https://twitter.com/your_twitter) - email@example.com
+
+Project Link: [https://github.com/username/repository-name](https://www.google.com/search?q=https://github.com/username/repository-name)
