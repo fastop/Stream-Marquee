@@ -1,12 +1,12 @@
 # Stream-Marquee
 
-> This project 
+> Tan simple como eso, una marquesina para streams.
 
 Read this in other languages: [Español](README.es.md)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/username/repository-name.svg)](https://github.com/username/repository-name/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/username/repository-name.svg)](https://github.com/username/repository-name/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/fastop/Stream-Marquee.svg)](https://github.com/fastop/Stream-Marquee/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/fastop/Stream-Marquee.svg)](https://github.com/fastop/Stream-Marquee/issues)
 
 ---
 
