@@ -14,8 +14,9 @@
         
         .btn {    
             display: inline-block;
+            cursor: pointer;
             padding: 0.75rem 0.75rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 400;
             color: white;
             text-align: center;
@@ -27,6 +28,7 @@
             border: thin solid #495057;
             border-radius: 0.5rem;
             background-color: #6c757d;    
+            &:hover { background-color: #232323; border-color: black;}
         }
 
         #mainTitle {
@@ -35,9 +37,9 @@
 
         .input {
             display: block;
-            width: 90%;
+            width: 70%;
             padding: .375rem .75rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 400;
             line-height: 1.5;
             color: black;
@@ -47,35 +49,52 @@
             background-clip: padding-box;
             border:  thin solid #495057;
             border-radius: 0.5rem;
-            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;            
         }
 
-        #txtTitle{
-            width: 50%;
-        }
-        #txtMarquee {
-            height: 5em;
+        #txtTitle{ width: 50%; }
+        .txtTopic {
+            height: 3em;
             margin-top: 3px;
             margin-bottom: 3px;
         }
 
-        #marqueeForm { margin-left: 5px;}
+        #marqueeForm { margin-left: 5px;}        
+        .btnDelTopic {  height: 50%;
+                        border-radius: 0rem !important;
+                        padding: 5px;
+                        margin-top: 6px;
+                        background-color: orangered;
+                        border-color: orangered;
+                    &:hover{ background-color: red; border-color: red;}}
 
+ 
+
+        .flex { display: flex;}
         </style>
 </head>
 <body>
     <marquee>
-        <div id="mainTitle">Estamos hablando de:</div>
-        <div id="mainMarquee"> Tema Mamamlon</div>
+        <div id="mainTitle">Default title:</div>
+        <div id="mainMarquee"> First Topic </div>
     </marquee>
 
     <hr/>
 
 
-    <form id="marqueeForm">
-        <input type="text" id="txtTitle" name="txtTitle" class="input" placeholder="Main Title">
-        <input type="text" id="txtMarquee" name="txtMarquee" class="input" placeholder="Topics">
-        <button class="btn" id="btnSetMarquee" > Send </button>
+    <form id="marqueeForm" name="marqueeForm">
+        <div id="title" class="flex">
+            <input type="text" id="txtTitle" name="txtTitle" class="input" placeholder="Main Title">
+            <button type="button" id="btnAddTopic" name="btnAddTopic" class="btn" alt="Add topic">+</button>
+        </div>
+        <div id="topics">
+            <div class="flex topic">
+                <input type="text" id="txtMarquee" name="txtMarquee" class="input txtTopic" placeholder="Topic">
+                <!-- <button id="btnDelTopic" name="btnDeltopic" class="btn" alt="Remove topic">x</button>  -->
+            </div>
+        </div>
+        <button type="button" class="btn" id="btnSetMarquee" > Send </button>
+        
     </form>
 
 
@@ -85,10 +104,16 @@
 
        loadData()
 
+               
+        /*
+           Function: loadData()
+           This funcion load all data from localstorage to form and marquee         
+        */
         function loadData(){
                         
             let mainTitle =(localStorage.getItem("mainTitle") === null)? "" : localStorage.getItem("mainTitle");
             let marquee =  (localStorage.getItem("marquee") === null)? "" : localStorage.getItem("marquee");
+                marquee = marquee.split(",");
 
             //Loading to marquee
             document.getElementById("mainTitle").innerHTML = mainTitle;
@@ -98,12 +123,15 @@
             document.getElementById("txtTitle").value = mainTitle;//Value for main title 
             document.getElementById("txtMarquee").value = marquee;//Value for themes
         }
-
-            
+        
+        /*
+           Function: setMarqueeValues()
+           This function saves all data from forms to localstorage
+        */
         function setMarqueeValues() {
 
             let mainTitle = document.getElementById("txtTitle").value;//Value for main title 
-            let marquee = document.getElementById("txtMarquee").value;//Value for themes
+            let marquee = getAllTopics();// document.getElementById("txtMarquee").value;//Value for themes
 
             localStorage.setItem("mainTitle", mainTitle);
             localStorage.setItem("marquee", marquee);
@@ -112,9 +140,9 @@
         }   
 
         //Handle the form event
-        const form = document.getElementById("marqueeForm");
+        let form = document.getElementById("marqueeForm");
         form.addEventListener('submit', function(event){
-            event.preventDefault();
+            event.preventDefault(); 
             setMarqueeValues();
         });
 
@@ -123,6 +151,46 @@
         btn.addEventListener('click', function(){
             setMarqueeValues();
         });
+
+        const btnAddTopic = document.getElementById('btnAddTopic');
+        btnAddTopic.addEventListener('click', function(){            
+            addTopic()
+        });
+ 
+
+        function addTopic(){
+           const topics = document.getElementById("topics");
+               
+           let topic = `<div class="flex topic"><input type="text" class="input txtTopic" placeholder="Topic"> 
+                        <button class="btn btnDelTopic" alt="Remove topic" onclick="deleteTopic(this)">x</button></div>`;
+ 
+               topics.insertAdjacentHTML('beforeend', topic);             
+        }
+
+        function getAllTopics(){
+            const allTopics = document.getElementsByClassName("topic");
+            let aTopics = []; //Array
+
+            for(let i=0; i<allTopics.length;i++){ //Classic Style
+                if(allTopics[i].children[0].value !== "")
+                    aTopics.push(allTopics[i].children[0].value)
+            }
+
+          return aTopics;
+        }
+
+        function deleteTopic(el) {
+            el.closest('.topic').remove();
+            console.log(">>>");
+            getAllTopics();
+        }
+
+        function loadAllTopics(topics){
+
+            for(let i=0; i<topics.length; i++){
+                
+            }
+        }
 
 
     </script>
