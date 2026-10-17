@@ -2,7 +2,6 @@
 
 > Tan simple como eso, una marquesina para streams.
 
-Read this in other languages: [Español](README.es.md)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/fastop/Stream-Marquee.svg)](https://github.com/fastop/Stream-Marquee/stargazers)
@@ -10,25 +9,23 @@ Read this in other languages: [Español](README.es.md)
 
 ---
 
-## 📖 Table of Contents
-
-- [About the Project](#-about-the-project)
-  - [Key Features](#key-features)
-  - [Tech Stack](#tech-stack)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
+## 📖 Tabla de Contenido
+ 
+- [🧐 Acerca del Proyecto](#🧐%20Acerca%20del%20Proyecto)
+  - [🔑Características Clave](#🔑Características%20Clave)
+  - [🤖Tecnologías Utilizadas](#🤖Tecnologías%20Utilizadas)
+- [🚀Empecemos](#🚀%20Empecemos)
+  - [🧩Pre-requisitos](#🧩Pre-requisitos)
   - [Installation](#installation)
 - [Usage](#-usage)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+- [📄 Licencia](#📄%20Licencia)
+- [✉️ Contacto](#✉️%20Contacto)
 
 ---
 
-## 🧐 About the Project
+## 🧐 Acerca del Proyecto
 
-Provide a detailed overview of your project here. Explain the **problem** it solves, **why** you built it, and **how** it works. You can also include screenshots or GIF demos here.
+Este 'proyecto' nace de la necesidad de tener una marquesina rapida, personalizable y sencilla para los momentos en los cuales se hace stream.
 
 ![Project Screenshot](https://via.placeholder.com/800x400.png?text=Project+Screenshot+or+Demo+GIF)
 
@@ -36,32 +33,34 @@ Provide a detailed overview of your project here. Explain the **problem** it sol
 
 
 
-### Key Features
+### 🔑Características Clave
 
-* 🚀 **Feature 1**: Description of what this feature does.
-* ⚡ **Feature 2**: Description of what this feature does.
-* 🔒 **Feature 3**: Description of what this feature does.
+* 🚀 **Sencillo**: Todo se hace en el mismo lugar.
+* ⚡ **Rápido sin configuración**: No es necesario mas que un simple archivo HTML.
+* 🔒 **Local**: No es necesario colocar credenciales complicadas ni una URL para conectarse.
 
-### Tech Stack
+### 🤖Tecnologías Utilizadas
 
-* **Frontend**: Plain HTML / CSS / JS
+* **Frontend**:  HTML / CSS / JS
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Empecemos
 
-Follow these instructions to get a local copy of the project up and running for development and testing.
+Sigue estas instrucciones para tener una copia local del proyecto lista y en funcionamiento para su uso, o en su debido caso, continuar con el desarrollo.
 
-### Prerequisites
+### 🧩Pre-requisitos 
 
-List any software, tools, or dependencies required before running the setup (e.g., Node.js, Python, Docker).
+Para empezar es necesario contar con alguna herramienta para hacer streams que soporte HTML de manera local. En este caso utilizaremos [OBS](https://obsproject.com/es/download)
 
- ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
 
-## ✉️ Contact
+ ## 📄 Licencia
 
-Your Name - [@your_twitter](https://www.google.com/search?q=https://twitter.com/your_twitter) - email@example.com
+Distribuido bajo la licencia MIT. Consulte el archivo `LICENSE` para obtener más información.
 
-Project Link: [https://github.com/username/repository-name](https://www.google.com/search?q=https://github.com/username/repository-name)
+## ✉️ Contacto
+
+🤖fastop -  fastop@gmail.com
+
+Project Link: [https://github.com/fastop/Stream-Marquee](https://www.google.com/search?q=https://github.com/fastop/Stream-Marquee)

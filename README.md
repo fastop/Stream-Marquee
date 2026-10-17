@@ -1,28 +1,26 @@
 # Stream-Marquee
 
-> This project 
+> As simple as that: a marquee for streams.
 
-Read this in other languages: [Español](README.es.md)
+Read this in [Español](README.es.md)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/username/repository-name.svg)](https://github.com/username/repository-name/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/username/repository-name.svg)](https://github.com/username/repository-name/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/fastop/Stream-Marquee.svg)](https://github.com/fastop/Stream-Marquee/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/fastop/Stream-Marquee.svg)](https://github.com/fastop/Stream-Marquee/issues)
 
 ---
 
 ## 📖 Table of Contents
 
-- [About the Project](#-about-the-project)
-  - [Key Features](#key-features)
-  - [Tech Stack](#tech-stack)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
+- [🧐 About the Project](#🧐%20About%20the%20Project)
+  - [🔑Key Features](#🔑Key%20Features)
+  - [🤖Tech Stack](#🤖Tech%20Stack)
+- [🚀Getting Started](#🚀%20Getting%20Started)
+  - [🧩Prerequisites](#🧩prerequisites)
   - [Installation](#installation)
 - [Usage](#-usage)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+- [📄 License](#📄%20License)
+- [✉️ Contact](#✉️%20Contact)
 
 ---
 
@@ -36,13 +34,13 @@ Provide a detailed overview of your project here. Explain the **problem** it sol
 
 
 
-### Key Features
+### 🔑Key Features
 
-* 🚀 **Feature 1**: Description of what this feature does.
-* ⚡ **Feature 2**: Description of what this feature does.
-* 🔒 **Feature 3**: Description of what this feature does.
+* 🚀 **Simple**: Everything is done in one place.
+* ⚡ **Fast and no setup required**: All you need is a simple HTML file.
+* 🔒  **Local**: No need to enter complicated credentials or a URL to connect.
 
-### Tech Stack
+### 🤖Tech Stack
 
 * **Frontend**: Plain HTML / CSS / JS
 
@@ -50,11 +48,13 @@ Provide a detailed overview of your project here. Explain the **problem** it sol
 
 ## 🚀 Getting Started
 
-Follow these instructions to get a local copy of the project up and running for development and testing.
+Follow these instructions to have a local copy of the project up and running for use, or, if applicable, to continue development.
 
-### Prerequisites
+### 🧩Prerequisites
 
-List any software, tools, or dependencies required before running the setup (e.g., Node.js, Python, Docker).
+First, you'll need a streaming tool that supports HTML locally. In this case, we'll use [OBS](https://obsproject.com/es/download)
+
+
 
  ## 📄 License
 
@@ -62,6 +62,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-Your Name - [@your_twitter](https://www.google.com/search?q=https://twitter.com/your_twitter) - email@example.com
+🤖 fastop -  fastop@gmail.com
 
-Project Link: [https://github.com/username/repository-name](https://www.google.com/search?q=https://github.com/username/repository-name)
+Project Link: [https://github.com/fastop/Stream-Marquee](https://www.google.com/search?q=https://github.com/fastop/Stream-Marquee)
